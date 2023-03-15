@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My information</title>
+        <body>
+            <p id="program"></p>
+            
+            <script>
+                const notes = JSON.parse(localStorage.getItem("notes"))
+                var displayNote = ""
+                for(var i=0; i< notes.length; i++){
+                    displayNote += `<li> ${notes[i].title}  ${notes[i].message}</li>`
+                }
+                document.getElementById("program").innerHTML=displayNote;
+            </script>
+        </body>
+    </head>
+</html>
